@@ -23,6 +23,9 @@ Una cosa importante de react es que tiene un ecosistema variado y amplio. Para g
 
 Es necesario tener node.js (y tenerlo actualizado). Para iniciar un entorno de trabajo local, se crea una carpeta o nos situamos donde vayamos a trabajar y ejecutamos el comando *npx create-react-app nombre-de-la-app*. Una vez instalado, nos movemos con *cd nombre-de-la-app* al directorio y ejecutamos *npm start* para empezar a trabajar. Esto creará un directorio llamado **node-modules** y, al habernos creado la aplicación de React con npx, ya tendremos un esquema del directorio con diferentes ficheros que ya se pueden empezar a manipular.
 
+#
+#
+#
 
 # Getting Started with Create React App
 
