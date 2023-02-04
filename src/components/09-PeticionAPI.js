@@ -8,8 +8,7 @@ const Peticion = () => {
         fetch("https://rickandmortyapi.com/api/character")
         .then(response => response.json())
         .then(data => {
-            console.log(data)
-            //setDatos(data)
+            setDatos(data)
         })
     }, []);
 
@@ -38,25 +37,25 @@ const Peticion = () => {
             </div>
             <div className="card">
                 <hr />
-                {datos && datos.results.map((datos) => {
+                {datos && datos.results.map((item) => {
                     return(
-                        <div key={datos.id}>
+                        <div key={item.id}>
                         <div style={{display:"flex", textAlign:"left"}}>
                             <div className="card-header">
-                                <img src={datos.image} alt="imagen" />
+                                <img src={item.image} alt="imagen" />
                             </div>
 
                             <div className="card-body" style={{marginLeft:"100px"}}>
-                                <h3 className="card-title">Nombre: {datos.name}</h3>
-                                <h4 className="card-subtitle mb-2 text-muted">Especie: {datos.species}</h4>
-                                <h4 className="card-text">Estado: {datos.status}</h4>
-                                <h4 className="card-text">Tipo :{datos.type}</h4>
-                                <h4 className="card-text">Género : {datos.gender}</h4>
-                                <h4 className="card-text">Origen : {datos.origin.name}</h4>
+                                <h3 className="card-title">Nombre: {item.name}</h3>
+                                <h4 className="card-subtitle mb-2 text-muted">Especie: {item.species}</h4>
+                                <h4 className="card-text">Estado: {item.status}</h4>
+                                <h4 className="card-text">Tipo :{item.type}</h4>
+                                <h4 className="card-text">Género : {item.gender}</h4>
+                                <h4 className="card-text">Origen : {item.origin.name}</h4>
                             </div>
                             <div className="card-body" style={{marginLeft:"100px"}}>
-                                <h4 className="card-title">Último lugar: {datos.location.name}</h4>
-                                <h4 className="card-text">Episodios : {datos.episode.length}</h4>
+                                <h4 className="card-title">Último lugar: {item.location.name}</h4>
+                                <h4 className="card-text">Episodios : {item.episode.length}</h4>
                             </div>
                         </div>
                             <hr/>
