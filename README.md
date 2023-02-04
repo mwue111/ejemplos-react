@@ -20,8 +20,8 @@ El funcionamiento sería el siguiente: por cada elemento modificado, la aplicaci
 Una cosa importante de react es que tiene un ecosistema variado y amplio. Para gestionar elementos como formularios, o los tests, o el empaquetado para que el navegador pueda ejecutar la aplicación, hay muchas opciones. La principal diferencia con Angular, por ejemplo, radica aquí: Angular viene con todo el ecosistema montado.
 
 # Empezando con React
-
-Es necesario tener node.js (y tenerlo actualizado). Para iniciar un entorno de trabajo local, se crea una carpeta o nos situamos donde vayamos a trabajar y ejecutamos el comando *npx create-react-app nombre-de-la-app*. Una vez instalado, nos movemos con *cd nombre-de-la-app* al directorio y ejecutamos *npm start* para empezar a trabajar. Esto creará un directorio llamado **node-modules** y, al habernos creado la aplicación de React con npx, ya tendremos un esquema del directorio con diferentes ficheros que ya se pueden empezar a manipular.
+React puede ser añadido a nuestro proyecto añadiendolo por medio de etiquetas script o a traves de instaladores de paquetes como npm.
+Aunque no es necesario tener node.js (y tenerlo actualizado), si que es bastante recomendable pues hace más sencillo el proceso. Para iniciar un entorno de trabajo local, se crea una carpeta o nos situamos donde vayamos a trabajar y ejecutamos el comando *npx create-react-app nombre-de-la-app*. Una vez instalado, nos movemos con *cd nombre-de-la-app* al directorio y ejecutamos *npm start* para empezar a trabajar. Esto creará un directorio llamado **node-modules** y, al habernos creado la aplicación de React con npx, ya tendremos un esquema del directorio con diferentes ficheros que ya se pueden empezar a manipular.
 
 #
 #
