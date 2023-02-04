@@ -12,6 +12,7 @@ function App() {
 
   return (
     <div className="App"> 
+    {/*
       <HelloWorld />
       <PreguntaRespuesta />
       <BucleFor />
@@ -19,6 +20,7 @@ function App() {
       <Events/>
       <Onclick />
       <Cargador />
+    */}
     </div>
   );
 }
