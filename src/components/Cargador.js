@@ -15,6 +15,44 @@ const Cargador = () => {
 
     const [elegido, setElegido] = useState(ejercicios[0]);
 
+    const switcher = (elegido) => {
+        let chosen = null;
+        switch(elegido){
+            case "HelloWorld":
+                chosen = <HelloWorld/>
+                        break;
+            case "PreguntaRespuesta":
+                chosen = <PreguntaRespuesta/>
+                break;
+            case "BucleFor":
+                chosen = <BucleFor/>
+                break;
+            case "Formularios":
+                chosen = <Formularios/>
+                break;
+            case "EventoClick":
+                chosen = <EventoClick/>
+                break;
+            case "EventoKey":
+                chosen = <EventoKey/>
+                break;
+            case "Reutilizacion":
+                    chosen = <Reutilizacion/>
+                    break;
+            case "ListaDeTareas":
+                chosen = <ListaDeTareas/>
+                break;
+            case "Peticion":
+                chosen = <Peticion/>
+                break;
+            default:
+                chosen = <HelloWorld/>
+                break;
+        }
+        return chosen
+    }
+
+
     return(
         <div>
             <div>
@@ -25,15 +63,7 @@ const Cargador = () => {
             </select>
             </div>
             <div>
-                {elegido === "HelloWorld" && <HelloWorld />}
-                {elegido === "PreguntaRespuesta" && <PreguntaRespuesta />}
-                {elegido === "BucleFor" && <BucleFor />}
-                {elegido === "Formularios" && <Formularios />}
-                {elegido === "EventoClick" && <EventoClick />}
-                {elegido === "EventoKey" && <EventoKey />}
-                {elegido === "Reutilizacion" && <Reutilizacion />}
-                {elegido === "ListaDeTareas" && <ListaDeTareas />}
-                {elegido === "Peticion" && <Peticion />}
+                {switcher(elegido)}
             </div>
         </div>
     )

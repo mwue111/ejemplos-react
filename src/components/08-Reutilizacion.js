@@ -4,8 +4,6 @@ const Reutilizacion = () => {
     return(
         <div>
             <Saludador />
-            <Saludador nombre="Shakira"/>
-            <Saludador nombre="Piqué"/>
             <Saludador nombre="Pablo"/>
             <Sumador />
         </div>
@@ -19,7 +17,7 @@ const Saludador = ({nombre}) => {
     return(
         <div>
             <input type="text" placeholder="Introduce un texto" value={texto} onChange={(e)=>setTexto(e.target.value)}/>
-            <p>Hola {texto}</p>
+            {texto==="Piqué"? <p>Perdón que te sal-{texto}</p>:(texto==="Shakira"?<p>Clara-mente</p>:<p>Hola {texto}</p>)}
             <hr/>
         </div>
     );
