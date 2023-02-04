@@ -1,3 +1,29 @@
+# React
+En general, las interfaces de usuario están formadas por:
+
+-	**Estructura o layout**: disposición de los elementos en la pantalla.
+
+-	**Comportamiento o lógica**: código que recoge información de inputs, transforma variables, etc…
+
+-	**Apariencia o estilos**: interfaz pura.
+
+Lo más básico que hay que saber de React es que la unidad lógica con la que trabaja es el componente. Éste agrupa estructura, comportamiento y apariencia.
+
+Los componentes son reutilizables y están encapsulados. 
+
+La aplicación web es, por tanto, un conjunto de componentes anidados en forma de árbol, similar al árbol DOM. El nodo raíz, desde el cual cuelgan todos los componentes, generalmente se llama App.
+
+La estructura de componentes es similar al árbol DOM, pero esto es porque React realiza una copia de éste para optimizar el renderizado de la página. Esta copia se llama DOM virtual, y lo que hace es permitir la actualización de contenidos sin tener que “repintar” el DOM nativo completo: la idea que subyace es que del DOM nativo sólo se vuelva a pintar aquello que se haya modificado, reduciendo así su número de actualizaciones.
+
+El funcionamiento sería el siguiente: por cada elemento modificado, la aplicación identifica los nodos que hay que cambiar y se los pasa al virtual DOM. Éste compara el DOM nativo con el DOM resultante de los cambios y los lleva a cabo. Esta acción de comparación y re-renderización del DOM nativo se llama *diffing*.
+
+Una cosa importante de react es que tiene un ecosistema variado y amplio. Para gestionar elementos como formularios, o los tests, o el empaquetado para que el navegador pueda ejecutar la aplicación, hay muchas opciones. La principal diferencia con Angular, por ejemplo, radica aquí: Angular viene con todo el ecosistema montado.
+
+# Empezando con React
+
+Es necesario tener node.js (y tenerlo actualizado). Para iniciar un entorno de trabajo local, se crea una carpeta o nos situamos donde vayamos a trabajar y ejecutamos el comando *npx create-react-app nombre-de-la-app*. Una vez instalado, nos movemos con *cd nombre-de-la-app* al directorio y ejecutamos *npm start* para empezar a trabajar. Esto creará un directorio llamado **node-modules** y, al habernos creado la aplicación de React con npx, ya tendremos un esquema del directorio con diferentes ficheros que ya se pueden empezar a manipular.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
