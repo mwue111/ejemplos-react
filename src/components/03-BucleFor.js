@@ -3,11 +3,16 @@ import React from 'react';
 const BucleFor = () => {
 
     const tamagotchis = ['iDL', 'Smart', 'On', 'Pix', '1GEN'];
+    
     const muestraArray = tamagotchis.map((item) => 
-    <li key={item}>{item}</li>)
+        <li key={item}>{item}</li>
+    )
     
     return(
-        <ul>{muestraArray}</ul>
+        <div>
+            <strong>Lista de tamagothis: </strong>
+            <ul>{muestraArray}</ul>
+        </div>
     );
 }
 

@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+#onclick{
+  margin: 10px auto;
+  text-align: center;
+  width: 50%;
+  border-radius: 1em;
+  padding: 20px;
+}
+
+.cambiaFondo{
+  background-color: red;
+}
+
+.fondo2{
+  background-color: green;
+}

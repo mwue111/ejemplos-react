@@ -8,10 +8,9 @@ const PreguntaRespuesta = () => {
     
     return(
         <div>
-            <p>La pregunta es: </p>
+            <strong>La pregunta es: </strong>
             <Pregunta pregunta={question} />
-            <br/>
-            <p>La respuesta es: </p>
+            <strong>La respuesta es: </strong>
             <Respuesta respuesta={answer} />
         </div>
     )
