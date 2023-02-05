@@ -8,7 +8,8 @@ const Peticion = () => {
         fetch("https://rickandmortyapi.com/api/character")
         .then(response => response.json())
         .then(data => {
-            setDatos(data)
+            console.log(data)
+            //setDatos(data)
         })
     }, []);
 
