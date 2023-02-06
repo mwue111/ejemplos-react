@@ -13,9 +13,17 @@ Los componentes son reutilizables y están encapsulados.
 
 La aplicación web es, por tanto, un conjunto de componentes anidados en forma de árbol, similar al árbol DOM. El nodo raíz, desde el cual cuelgan todos los componentes, generalmente se llama App.
 
-La estructura de componentes es similar al árbol DOM, pero esto es porque React realiza una copia de éste para optimizar el renderizado de la página. Esta copia se llama DOM virtual, y lo que hace es permitir la actualización de contenidos sin tener que “repintar” el DOM nativo completo: la idea que subyace es que del DOM nativo sólo se vuelva a pintar aquello que se haya modificado, reduciendo así su número de actualizaciones.
+La estructura de componentes es similar al árbol DOM (modelo de nodos que acaba pintándose en el navegador), pero esto es porque React realiza una copia de éste para optimizar el renderizado de la página. Esta copia se llama DOM virtual, y lo que hace es permitir la actualización de contenidos sin tener que “repintar” el DOM nativo completo: la idea que subyace es que del DOM nativo sólo se vuelva a pintar aquello que se haya modificado, reduciendo así su número de actualizaciones.
 
-El funcionamiento sería el siguiente: por cada elemento modificado, la aplicación identifica los nodos que hay que cambiar y se los pasa al virtual DOM. Éste compara el DOM nativo con el DOM resultante de los cambios y los lleva a cabo. Esta acción de comparación y re-renderización del DOM nativo se llama *diffing*.
+El funcionamiento sería el siguiente: el DOM está conectado con el documento HTML de manera directa. La aplicación (APP) captura los eventos que ocurren en el DOM y localiza qué secciones han sido afectadas por éstos, identificando estos nodos como aquellos a cambiar y se los pasará al DOM virtual para que éste compare el DOM nativo con el DOM resultante de los cambios (es decir, que localice las diferencias entre el renderizado anterior y el siguiente) y realice sobre el DOM estos cambios. Esta acción de comparación y re-renderización del DOM nativo se llama *diffing*. Este proceso se llama **reconciliación**.
+
+![Captura de pantalla 2023-02-06 093440](https://user-images.githubusercontent.com/98398933/216926014-64a09b35-601e-44cf-9ea1-c72ab3994064.jpg)
+
+React se encarga del tratamiento del DOM virtual y la captura de los eventos en la APP. La parte del DOM y su conexión con HTML es un adaptador que en este caso estaría enfocado al DOM para ser renderizado en navegadores y se llama ReactDOM.
+
+![Captura de pantalla 2023-02-06 093752](https://user-images.githubusercontent.com/98398933/216926135-d8c9d542-f064-4378-83ad-a2b840c4d483.jpg)
+
+Los adaptadores pueden estar enfocados a renderizar en otros dispositivos: por ejemplo, React Native es el adaptador que se emplea para traducir lo que hace React a sistemas operativos móviles, Android o iOS. De esta manera se puede desarrollar con el mismo código para diferentes plataformas (por lo tanto el punto de entrada para el desarrollador o desarrolladora es uniforme).
 
 Una cosa importante de react es que tiene un ecosistema variado y amplio. Para gestionar elementos como formularios, o los tests, o el empaquetado para que el navegador pueda ejecutar la aplicación, hay muchas opciones. La principal diferencia con Angular, por ejemplo, radica aquí: Angular viene con todo el ecosistema montado.
 
